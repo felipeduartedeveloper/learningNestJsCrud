@@ -11,4 +11,11 @@ export class CoursesService {
       tags: ['node.js', 'nestjs', 'javascript'],
     },
   ];
+
+  findAll() {
+    return this.courses;
+  }
+  findOne(id: string) {
+    return this.courses.find((course) => course.id === Number(id));
+  }
 }
