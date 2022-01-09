@@ -32,7 +32,7 @@ export class CoursesService {
       (course) => course.id === Number(id),
     );
     if (indexCourse >= 0) {
-      this.courses.splice(indexCourse, deleteCount: 1);
+      this.courses.splice(indexCourse, 1);
     }
   }
 }
