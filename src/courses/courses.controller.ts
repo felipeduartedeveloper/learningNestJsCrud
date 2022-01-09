@@ -14,7 +14,8 @@ import { CoursesService } from './courses.service';
 
 @Controller('courses')
 export class CoursesController {
-  constructor(provate, readonly courseService: CoursesService) {}
+  constructor(private readonly courseService: CoursesService) {}
+
   @Get()
   findAll(@Res() response) {
     return response.status(200).send('Listagem');
